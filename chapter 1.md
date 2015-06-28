@@ -9,4 +9,4 @@ Fundamental unit of any organization is data. Data derives decision-making in mo
 * What customers to target in marketing
 * Where bottlenecks exist in a process
 * How customers feel about a product
-![Value of Data](https://github.com/Yatish0833/Collecting-storing-and-retrieving-data/blob/master/Images/Big-Data-Value-Continuum-Image-2b.png "Value of Data")
+![Value of Data](https://github.com/Yatish0833/Collecting-storing-and-retrieving-data/blob/master/Images/Big-Data-Value-Continuum-Image-2b.png "Value of Data")Fig. 1a Graph of Data value vs Data Age, depicting the importance of individual data and aggregate data.
