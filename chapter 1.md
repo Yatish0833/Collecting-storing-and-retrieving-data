@@ -2,7 +2,7 @@
 
 ## Introduction
 
-### The value of data: 
+#### Value of data: 
 Fundamental unit of any organization is data. Data derives decision-making in most organizations. e.g.
 
 * Where to locate a new franchise
