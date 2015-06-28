@@ -28,3 +28,19 @@ Data scientists turn data from various sources into actionable information.
 * Data munging and data wrangling to make it useful for analysis and visualization.
 * Cleaning of data to deal with missing values
 * Curation of data to make it available for reuse and preservation
+
+## Big Data
+Big data is a relatively new term that describes data set that are so large and complex that traditional methods of storing and processing them are not sufficient. The need and importance of big data can be depicted easily with the following statistics:
+        Every 60 seconds there are
+        * Over 100,000 tweets
+        *	695,000 Facebook status updates
+        *	11 million instant messages
+        *	700,000+ Google searches
+        *	168 million+ emails sent
+        *	1,820 TB of data created
+        *	217 new mobile web users
+
+Above statistics is just a glimpse of volume of data, which is constantly growing:
+•	Every day over 2.5 quintillion bytes of data is being generated
+•	90% of the world’s data has been generated over the past two years
+
