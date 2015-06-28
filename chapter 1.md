@@ -15,6 +15,7 @@ Data needs to be in a format that allows for qualitative, quantitative and stati
 
 ![Good data](https://github.com/Yatish0833/Collecting-storing-and-retrieving-data/blob/master/Images/Screen%20Shot%202015-06-26%20at%202.24.38%20PM.png "Good data")
 Fig. 1b Well formatted data
+
 ![Bad data](https://github.com/Yatish0833/Collecting-storing-and-retrieving-data/blob/master/Images/Screen%20Shot%202015-06-26%20at%202.25.09%20PM.png "Bad data")
 Fig. 1c Poorly formatted data with missing values
 
