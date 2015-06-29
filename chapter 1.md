@@ -48,5 +48,6 @@ Above statistics is just a glimpse of volume of data, which is constantly growin
 
 Due to the complexity involved with the term itself there is no single agreed upon definition of “Big Data”, One possible definition:
 >Big data is the integration of large amounts of multiple types of structured and unstructured data into a single data set that can be analyzed to gain insight and new understanding of an industry, business, the environment, medicine, disease control, science, and the human interactions and expectations.
+
 Larger data sets allow for more detailed analysis and application to social sciences, biology, pharmacology, business, marketing and more.
 
