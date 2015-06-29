@@ -93,12 +93,11 @@ Big data is set to offer tremendous insights, but with the terabytes and petabyt
   * Data is in format not conducive to analysis.
   * Data contains missing values or bad entries.
   * Data is not downloadable.
-* Storage - 
-* Curation -
-* Search and retrieval - 
-* Sharing - 
-* Transfer - 
-* Visualization - 
-* Privacy - 
+* Storage - Storage of such enormous data is a challenge in itself. There is a need for the system to be able to deal with terabytes/petabytes of data on a daily basis.
+* Curation - Curation of data deals with addressing the quality of data. Data has a real value only if it is accurate and timely and thus can help in the decision making process.
+* Search and retrieval - Timely retrival of meaningful data from the entire data set is one of the most important challenge.
+* Sharing / Transfer - Sharing/Transferring data is another concern as there is no platform easily available which allows transfer of such huge data, Organizations tend to invest a lot of money to design special architectures and infrastructures to facilitate data sharing/transfer.
+* Visualization - Visualization helps in extracting the meaningful information by processing the data and representing it in a way which can be easily deduced.
+* Privacy - Data security becomes the major concern especially when it comes to credit card data, personal ID information or other sensitive assets.
 
 
