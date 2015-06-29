@@ -31,7 +31,7 @@ Data scientists turn data from various sources into actionable information.
 
 ## Big Data
 Big data is a relatively new term that describes data set that are so large and complex that traditional methods of storing and processing them are not sufficient. The need and importance of big data can be depicted easily with the following statistics:
-        Every 60 seconds there are
+* Every 60 seconds there are
 ..* Over 100,000 tweets
 ..* 695,000 Facebook status updates
 ..* 11 million instant messages
