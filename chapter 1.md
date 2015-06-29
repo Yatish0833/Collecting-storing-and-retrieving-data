@@ -49,6 +49,11 @@ Above statistics is just a glimpse of volume of data, which is constantly growin
 Due to the complexity involved with the term itself there is no single agreed upon definition of “Big Data”, One possible definition:
 >Big data is the integration of large amounts of multiple types of structured and unstructured data into a single data set that can be analyzed to gain insight and new understanding of an industry, business, the environment, medicine, disease control, science, and the human interactions and expectations.
 
+Examples of Big data:
+* The Large Hadron Collider would generate 5 ×1020bytes per day if all of its sensors were turned on, almost 200 times more than all other data sources in the world combined.
+* The Square Kilometer Array radio telescope is expected to collect 14 exabytesof data per day for analysis
+* Walmart generates over 1 million customer transactions per hour that are curated in a multi-petabyte database for trend analysis
+
 Larger data sets allow for more detailed analysis and application to social sciences, biology, pharmacology, business, marketing and more. Data is everywhere and a lot of it is free. Organizations don't necessarily have to build their own massive data repositories before starting with big data analytics. Steps taken by many companies and government agencies to put large amounts of information into the public domain have made large volumes of data accessible to everyone.
 
 Some of the Important sources of data are:
