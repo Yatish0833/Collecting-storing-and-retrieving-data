@@ -87,9 +87,18 @@ Some of the Important sources of data are:
 * “Big Data” such as radio telescopes, particle physics
 
 Big data is set to offer tremendous insights, but with the terabytes and petabytes of data pouring in to organizations today, traditional architectures are not up to the challenge. There are many challenges which comes along with big data:
-* Analysis - 
-* Collection
+* Analysis - With the enormous amount of data available the major challenge is to leverage the value that data have to offer.
+* Collection - 
+  * Data is not free.
+  * Data is in format not conducive to analysis.
+  * Data contains missing values or bad entries.
+  * Data is not downloadable.
 * Storage - 
-* Curation - 
+* Curation -
+* Search and retrieval - 
+* Sharing - 
+* Transfer - 
+* Visualization - 
+* Privacy - 
 
-With the enormous amount of data available the major challenge is to leverage the value that data have to offer.
+
