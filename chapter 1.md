@@ -92,7 +92,12 @@ Some of the Important sources of data are:
 * “Big Data” such as radio telescopes, particle physics
 
 Big data is set to offer tremendous insights, but with the terabytes and petabytes of data pouring in to organizations today, traditional architectures are not up to the challenge. There are many challenges which comes along with big data:
-* Analysis - With the enormous amount of data available the major challenge is to leverage the value that data have to offer.
+* Analysis - With the enormous amount of data available the major challenge is to leverage the value that data have to offer. Big data requires complex analysis within relatively short time spans in order to detect trends and make decisions.
+Analysis techniques include, among many others:
+  * A/B Testing
+  * Visualization
+  * Machine Learning
+  *Time Series Analysis
 * Collection - 
   * Data is not free.
   * Data is in format not conducive to analysis.
@@ -104,5 +109,8 @@ Big data is set to offer tremendous insights, but with the terabytes and petabyt
 * Sharing / Transfer - Sharing/Transferring data is another concern as there is no platform easily available which allows transfer of such huge data, Organizations tend to invest a lot of money to design special architectures and infrastructures to facilitate data sharing/transfer.
 * Visualization - Visualization helps in extracting the meaningful information by processing the data and representing it in a way which can be easily deduced.
 * Privacy - Data security becomes the major concern especially when it comes to credit card data, personal ID information or other sensitive assets.
+
+#### Storing Big Data
+Traditional data storage technologies including text files, XML, and relational databases reach their limits when used to store very large amounts of data. Furthermore, the data that is needed for analysis includes not only text and numeric data, but unstructured data, such as text files, video, audio, blogs, sensor data, geospatial data, among others. Due to these hurdles storing big data becomes challenging, non relational databases provides a good alternative. Non relational database is a database that does not incorporate the table/key model that relational database management systems (RDBMS) promote. It has the ability to deal with large amount of data and can accomodate unstructured data easily. Fetching data from non relational database provides remarkable speed over relational database as the search query doesn't have to go through each table and key combination in this case.
 
 
