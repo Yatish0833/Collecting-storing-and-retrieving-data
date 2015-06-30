@@ -166,7 +166,8 @@ Virality measures how quickly data is spread and shared to each unique node. Tim
 
 > #### Checkpoint
 Concepts Pharma has built a data repository that collects self-reported eating habits of clinical trial participants through a mobile habit. The translation medicine group is using the data to determine if the drug in trial is causing digestive issues when taken with certain food groups. Which of the V’s should be of most concern to them?
-1. Veracity
+
+> 1. Veracity
 2. Volume
 3. Volatility
 4. Velocity
