@@ -54,6 +54,15 @@ Examples of Big data:
 * The Square Kilometer Array radio telescope is expected to collect 14 exabytesof data per day for analysis
 * Walmart generates over 1 million customer transactions per hour that are curated in a multi-petabyte database for trend analysis
 
+Characteristics of Big Data:
+* Very large, distributed aggregations of loosely structured data –often incomplete
+* In excess of multiple petabytes or exabytesof data
+* Billions of records about people or transactions
+* Loosely-structured and often distributed data
+* Flat schemas with few complex interrelationships
+* Time series data containing time-stamped events
+* Connections between data elements that must be probabilistically inferred through machine learning
+
 Larger data sets allow for more detailed analysis and application to social sciences, biology, pharmacology, business, marketing and more. Data is everywhere and a lot of it is free. Organizations don't necessarily have to build their own massive data repositories before starting with big data analytics. Steps taken by many companies and government agencies to put large amounts of information into the public domain have made large volumes of data accessible to everyone.
 
 Some of the Important sources of data are:
@@ -97,14 +106,16 @@ Analysis techniques include, among many others:
   * A/B Testing
   * Visualization
   * Machine Learning
-  *Time Series Analysis
+  * Time Series Analysis
 * Collection - 
   * Data is not free.
   * Data is in format not conducive to analysis.
   * Data contains missing values or bad entries.
   * Data is not downloadable.
 * Storage - Storage of such enormous data is a challenge in itself. There is a need for the system to be able to deal with terabytes/petabytes of data on a daily basis.
-* Curation - Curation of data deals with addressing the quality of data. Data has a real value only if it is accurate and timely and thus can help in the decision making process.
+* Curation - Curation of data deals with addressing the quality of data. Data has a real value only if it is accurate and timely and thus can help in the decision making process.Poor information quality can be costly:
+  * One study estimates that on average bad information costs businesses up to 10% of revenue
+  * Another study pegs the loss at over $600 billion annually in the U.S. alone
 * Search and retrieval - Timely retrival of meaningful data from the entire data set is one of the most important challenge.
 * Sharing / Transfer - Sharing/Transferring data is another concern as there is no platform easily available which allows transfer of such huge data, Organizations tend to invest a lot of money to design special architectures and infrastructures to facilitate data sharing/transfer.
 * Visualization - Visualization helps in extracting the meaningful information by processing the data and representing it in a way which can be easily deduced.
