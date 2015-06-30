@@ -165,4 +165,10 @@ Viscosity measures the resistance to flow in the volume of data, resistance to n
 Virality measures how quickly data is spread and shared to each unique node. Time is an important characteristic along with rate of proliferation. Virality of data can provide companies with instant insights into the target areas to launch marketing campaigns.
 
 > #### Checkpoint
-
+Concepts Pharma has built a data repository that collects self-reported eating habits of clinical trial participants through a mobile habit. The translation medicine group is using the data to determine if the drug in trial is causing digestive issues when taken with certain food groups. Which of the V’s should be of most concern to them?
+A.Veracity
+B.Volume
+C.Volatility
+D.Velocity
+E.Variety
+_Answer at the end of chapter_
