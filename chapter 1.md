@@ -173,4 +173,4 @@ Concepts Pharma has built a data repository that collects self-reported eating h
 4. Velocity
 5. Variety
 
-> <p style='text-align: right;'>_Answer at the end of chapter_</p>
+> |........:| _Answer at the end of chapter_
