@@ -135,7 +135,7 @@ Visualization helps in extracting the meaningful information by processing the d
 ###### Privacy - 
 Data security becomes the major concern especially when it comes to credit card data, personal ID information or other sensitive assets.
 
-#### Storing Big Data
+##### Storing Big Data
 Traditional data storage technologies including text files, XML, and relational databases reach their limits when used to store very large amounts of data. Furthermore, the data that is needed for analysis includes not only text and numeric data, but unstructured data, such as text files, video, audio, blogs, sensor data, geospatial data, among others. Due to these hurdles storing big data becomes challenging, non relational databases provides a good alternative. Non relational database is a database that does not incorporate the table/key model that relational database management systems (RDBMS) promote. It has the ability to deal with large amount of data and can accomodate unstructured data easily. Fetching data from non relational database provides remarkable speed over relational database as the search query doesn't have to go through each table and key combination in this case.
 
 
