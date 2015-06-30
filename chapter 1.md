@@ -173,6 +173,6 @@ Concepts Pharma has built a data repository that collects self-reported eating h
 4. Velocity
 5. Variety
 
-> <span class="right_align">
-_Answer at the end of chapter_
-</span>
+> _Answer at the end of chapter_
+
+### Planning A Big Data project
