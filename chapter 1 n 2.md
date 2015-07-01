@@ -230,3 +230,4 @@ Objectives needs to be clearly defined with proper outline of every step of the 
 * Government regulations may limit which data can be collected and how that data can be stored, transferred, or used.
 * Organizations must protect private data and not allow persons to be “identifiable”.
 
+# Chapter 2
