@@ -176,4 +176,50 @@ Concepts Pharma has built a data repository that collects self-reported eating h
 > _Answer at the end of chapter_
 
 ### Planning A Big Data project
-Planning a big data project i
+Planning a big data project is a complicated task which requires expertise in many different areas, data scientist or data analyst needs to be well versed with the following concepts:
+* Objectives
+* Data
+* Process
+* Infrastructure
+* Analytics
+
+##### Objectives
+Objectives needs to be clearly defined with proper outline of every step of the project. Data scientist needs to answer the questions like:
+* What is the purpose of the data project?
+* How is the data going to be used?
+* What is the business or organizational value of the data project?
+
+##### Data
+* What data needs to be collected?
+* Where will the data come from?
+  * Internal systems?
+  * Social networks?
+  * External data sources?
+* What is the structure of the data?
+  * Quantitative or qualitative?
+* What is the quality of the data?
+
+
+##### Processes
+* How will it be collected?
+* Who is involved in collection of the data?
+* How will the data be cleaned?
+* How will the data be loaded and transferred?
+* What kind of analysis needs to be done?
+  * Real time analysis?
+
+##### Infrastructure
+* Where will the data be stored?
+* What database or data store will be needed based on the volume, complexity, type, and required access of the data?
+* What hardware is needed to support responsive access to the data?
+* Who will manage the data store?
+* Who will supply the data store?
+
+##### Analytics
+* How will the data be presented?
+  * Tables?
+  * Visualizations?
+* What predictive models will be built?
+* How will the data from different sources be combined?
+* What skills are needed to do the analysis?
+* What programs or applications need to be built or purchased?
