@@ -176,4 +176,4 @@ Concepts Pharma has built a data repository that collects self-reported eating h
 > _Answer at the end of chapter_
 
 ### Planning A Big Data project
-
+Planning a big data project i
