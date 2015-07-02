@@ -298,7 +298,7 @@ Note that R is case sensitive which means that R treats the object names "AP" an
 R functions can be invoked by their name. Details of any in build functions or dataset can be accessed by adding a question mark (?) in front of the function or dataset name.
 ```r
 > ?sum
-
+![sum function](https://github.com/Yatish0833/Collecting-storing-and-retrieving-data/blob/master/Images/Screen%20Shot%202015-07-02%20at%205.47.15%20PM.png "Sum function")
 > sum(1,2,30)
 [1] 33
 
