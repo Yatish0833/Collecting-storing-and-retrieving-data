@@ -292,3 +292,27 @@ Assignment of value to any variable can be done in 2 ways in R:
 Later method is more frequently used by R users.
 Object names are case sensitive and cannot contain spaces or special characters. An object identifier must start with a letter, but may contain any letter or digit thereafter.
 
+Note that R is case sensitive which means that R treats the object names "AP" and "ap" as different objects. Accessing files is also most commonly case sensitive, so there’s a difference between “AirPassengers.txt” and “airpassengers.txt”.
+
+##### Functions
+R functions can be invoked by their name. Details of any in build functions or dataset can be accessed by adding a question mark (?) in front of the function or dataset name.
+```r
+> ?sum
+
+> sum(1,2,30)
+[1] 33
+
+> r <- c(1,2,3,4,5,6,7)
+> mean(r)
+[1] 4
+```
+
+user defined functions are an important part of programming in R. They allow code to be reused.
+```r
+> fraction<-function(x,y){
++ result <-x/y
++ print (result)
++ }
+> fraction(3,2)
+[1] 1.5
+```
