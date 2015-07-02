@@ -289,4 +289,6 @@ Assignment of value to any variable can be done in 2 ways in R:
 > word
 [1] "Hello"
 ```
-Later method is more frequently used by R users because with "=" operator one cannot assign a range to a variable whereas it can be done with "<-" operator.
+Later method is more frequently used by R users.
+Object names are case sensitive and cannot contain spaces or special characters. An object identifier must start with a letter, but may contain any letter or digit thereafter.
+
