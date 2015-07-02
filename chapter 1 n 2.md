@@ -247,6 +247,7 @@ Before we start with the basics of R lets make sure we have latest version of R.
 http://www.r-project.org/
 We recommend the use of Rstudio, a powerful IDE for R. Rstudio is also free and can be downloaded from their home website:
 http://www.rstudio.com/
+
 **Why R?** As we learned in the first chapter when we deal with big data we face many challenges, R provides a perfect platform to deal with these challenges as we will see as we go further. R provides a powerful environment which runs on several platforms, it can process enormous amount of data in one go or million chunks of data one by one. R also allows you to deal with bad or missing data and it makes reshaping and restructuring of data easy. 
 
 #### R objects
@@ -269,3 +270,23 @@ R can be directly used to solve simple or complex expressions:
 [1] 14.77811
 ```
 > Note: sqrt and exp are in build functions in R for Square root and exponential respectively.
+
+Assignment of value to any variable can be done in 2 ways in R:
+```r
+> x=12
+> x
+[1] 12
+
+> word = "Hello"
+> word
+[1] "Hello"
+
+> x <- 12
+> x
+[1] 12
+
+> word <- "Hello"
+> word
+[1] "Hello"
+```
+Later method is more frequently used by R users because with "=" operator one cannot assign a range to a variable whereas it can be done with "<-" operator.
