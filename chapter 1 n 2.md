@@ -242,3 +242,30 @@ Concepts Pharma has built a data repository that collects self-reported eating h
 # Chapter 2
 
 ## Basic R Programming
+
+Before we start with the basics of R lets make sure we have latest version of R. To install R on your computer go to the home website of R and follow the instructions there:
+http://www.r-project.org/
+We recommend the use of Rstudio, a powerful IDE for R. Rstudio is also free and can be downloaded from their home website:
+http://www.rstudio.com/
+**Why R?** As we learned in the first chapter when we deal with big data we face many challenges, R provides a perfect platform to deal with these challenges as we will see as we go further. R provides a powerful environment which runs on several platforms, it can process enormous amount of data in one go or million chunks of data one by one. R also allows you to deal with bad or missing data and it makes reshaping and restructuring of data easy. 
+
+#### R objects
+Data is stored as objects in R. Objects are created by:
+* Reading data from an external file
+* Retrieving data from a URL
+* Creating an object directly from the command line
+* Instantiating an object from within a program
+
+##### Expressions and Assignment
+R can be directly used to solve simple or complex expressions:
+```r
+> 12*21
+[1] 252
+
+> ((2^3)*5)-1
+[1] 39
+
+> sqrt(4)* exp(2)
+[1] 14.77811
+```
+> Note: sqrt and exp are in build functions in R for Square root and exponential respectively.
