@@ -230,4 +230,15 @@ Objectives needs to be clearly defined with proper outline of every step of the 
 * Government regulations may limit which data can be collected and how that data can be stored, transferred, or used.
 * Organizations must protect private data and not allow persons to be “identifiable”.
 
+> #### Checkpoint Answer
+Concepts Pharma has built a data repository that collects self-reported eating habits of clinical trial participants through a mobile habit. The translation medicine group is using the data to determine if the drug in trial is causing digestive issues when taken with certain food groups. Which of the V’s should be of most concern to them?
+
+> 1. **Veracity**
+2. Volume
+3. **Volatility**
+4. Velocity
+5. Variety
+
 # Chapter 2
+
+## Basic R Programming
