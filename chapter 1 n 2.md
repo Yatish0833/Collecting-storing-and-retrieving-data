@@ -318,3 +318,219 @@ user defined functions are an important part of programming in R. They allow cod
 > fraction(3,2)
 [1] 1.5
 ```
+##### Concatenation and Arrays
+Concatenating numeric or character values using the built-in c() function results in an indexable array.
+```r
+> a<-c(1,2,3,4,5,6,7,8)
+> a
+[1] 1 2 3 4 5 6 7 8
+> a[2]
+[1] 2
+> a + 10
+[1] 11 12 13 14 15
+> a
+[1] 1 2 3 4 5
+> b <-a/2
+> b
+[1] 0.5 1.0 1.5 2.0 2.5
+> c <-a + b
+> c
+[1] 1.5 3.0 4.5 6.0 7.5
+```
+
+##### Sequences and subscripting
+Sequencing or range of numbers can be selected in R using ":" operator.
+```r
+> 1:10
+[1] 1 2 3 4 5 6 7 8 9 10
+> 5:12
+[1] 5 6 7 8 9 10 11 12
+> 3:-3
+[1] 3 2 1 0 -1 -2 -3
+> 2*1:5
+[1] 2 4 6 8 10
+> 2*(1:5)
+[1] 2 4 6 8 10
+> a<-c(1:25)
+> a
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+ ```
+ Advanced sequencing can be done using inbuild R function called seq()
+ ```r
+ # Increment by 3
+ > seq(from=5,to=15,by=3)
+[1] 5 8 11 14
+# divide in 6 parts
+> seq(from=1,to=10,length=6)
+[1] 1.0 2.8 4.6 6.4 8.2 10.0
+# divide in 4 parts with decrement of 2.5
+> seq(from=100,length=4,by=-2.5)
+[1] 100.0 97.5 95.0 92.5
+# divide in parts equal to the vector range
+> x <-10:20
+> seq(from=50,to=52,along=x)
+[1] 50.0 50.2 50.4 50.6 50.8 51.0 51.2 51.4 51.6 51.8 52.0
+```
+Sequences are essentially arrays and particular elements of the sequence can be extracted with the [] subscript operator. Subscripting in R is much more flexible than many other programming languages.
+```r
+> # extract the 3rd element
+> x[3]
+[1] 12
+> # extract all BUT the 3rd element
+> x[-3]
+[1] 10 11 13 14 15 16 17 18 19 20
+```
+Concatenation can be used in conjunction with sequencing to retrieve a subset of elements.
+```r
+> x
+[1] 10 11 12 13 14 15 16 17 18 19 20
+> #retrieve the 5th and 7th elements
+> x[c(5,7)]
+[1] 14 16
+> #retrieve all but the 3rd, 5th, and 9th elements
+> x[c(-3,-5,-9)]
+[1] 10 11 13 15 16 17 19 20
+```
+Specific elements meeting a logical criterion can be selected using subscripting.
+```r
+> x
+[1] 10 11 12 13 14 15 16 17 18 19 20
+> #extract all elements greater than 14
+> x[x>14]
+[1] 15 16 17 18 19 20
+> z<-c(T,T,F,T,F,T,F)
+> z
+[1]  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE
+> z[z==T]
+[1] TRUE TRUE TRUE TRUE
+```
+##### Listing and Deleting objects
+Great strength of R lies in the flexibility it provides. We can use the shell scripting commands ls() and rm() to list and delete objects in R
+```r
+> ls()
+[1] "a"    "b"    "c"    "r"    "word" "x"    "z"  
+> rm("word")
+> ls()
+[1] "a" "b" "c" "r" "x" "z"
+#remove all objects  from current session
+rm(list=ls())
+```
+##### Comments
+Comments are the most important part of any program/code. Scripts should be commented so that you or others understand the intent of the commands and functions.Any text after a hash mark (#) is ignored by R.
+
+#### Data Frames
+Data frames are the most common type of compound data structure used in R in addition to scalar values (vectors) and collections of values (array sequences). They are similar to C++ and Java objects or C struct’s. A data frame is composed of multiple values each of which is commonly a sequence.
+
+A data frame is often created by loading data from an external file or created internally. Data frames are essentially spreadsheets of columns and rows.
+```r
+> x<-1:10
+> y<-seq(from=100,to=300,by=5)
+> # create a new data frame 'df'
+> df<-data.frame(x,y)
+Error in data.frame(x, y) :
+arguments imply differing number of rows: 10, 41
+> y<-seq(from=100,to=300,length=10)
+> df<-data.frame(x,y)
+```
+> Note: To combine two vectors into a dataframe they have to be of same length
+Individual elements of a dataframe can be accessed same way as array using [] subscript operator.
+```r
+> df
+    x        y
+1   1 100.0000
+2   2 122.2222
+3   3 144.4444
+4   4 166.6667
+5   5 188.8889
+6   6 211.1111
+7   7 233.3333
+8   8 255.5556
+9   9 277.7778
+10 10 300.0000
+> df[6,2]
+[1] 211.1111
+# Accessing entire column
+> df[,2]
+ [1] 100.0000 122.2222 144.4444 166.6667 188.8889 211.1111 233.3333 255.5556 277.7778 300.0000
+ # Accessing entire row
+ > df[1,]
+  x   y
+1 1 100
+```
+Details about what any variable is storing can be determined using str() function. Other functions to determine the dimensions of any variable are: dim(), length(), ncol(), nrow etc
+```r
+> str(df)
+'data.frame':	10 obs. of  2 variables:
+ $ x: int  1 2 3 4 5 6 7 8 9 10
+ $ y: num  100 122 144 167 189 ...
+> ncol(df)
+[1] 2
+> nrow(df)
+[1] 10
+> length(df)
+[1] 2
+> dim(df)
+[1] 10  2
+> length(df$x)
+[1] 10
+> dim(df)[1]
+[1] 10
+#referencing the last element
+> x
+[1] 1 2 3 4 5 6 7 8 9 10
+> x[length(x)]
+[1] 10
+```
+R comes with many built in datasets which can be used for practice purpose. A complete list of built in datasets can be accessed using the homepage of package datasets.
+https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
+
+discoveries dataset contains the numbers of “great” inventions and scientific discoveries in each year from 1860 to 1959.
+```r
+> discoveries
+Time Series:
+Start = 1860 
+End = 1959 
+Frequency = 1 
+  [1]  5  3  0  2  0  3  2  3  6  1  2  1  2  1  3  3  3  5  2  4  4  0  2  3  7 12  3 10  9  2  3  7
+ [33]  7  2  3  3  6  2  4  3  5  2  2  4  0  4  2  5  2  3  3  6  5  8  3  6  6  0  5  2  2  2  6  3
+ [65]  4  4  2  2  4  7  5  3  3  0  2  2  2  1  3  4  2  2  1  1  1  2  1  4  4  3  2  1  4  1  1  1
+ [97]  0  0  2  0
+
+#converting in built data into a dataframe
+> Discoveries<- data.frame(year=1860:1959,count=discoveries)
+> head(Discoveries)
+  year count
+1 1860     5
+2 1861     3
+3 1862     0
+4 1863     2
+5 1864     0
+6 1865     3
+```
+The head() and tail() functions list the first or last six rows of a data frame. These functions comes in handy while dealing with larger datasets.
+
+Given a logical statement, any() tests if at least one value in the set meets the criterion.
+```r
+> any(Discoveries[,2]<0)
+[1] FALSE
+> any(Discoveries[,1] < 1860 | Discoveries[,1] > 1959)
+[1] FALSE
+```
+##### Descriptive statistics
+We will be mainly dealing with big data through R, descriptive statistics functions like mean(), max(), which(), will be very helpful in navigating through the huge dataset quickly and accurately.
+```r
+> mean(Discoveries[,2])
+[1] 3.1
+> round(mean(Discoveries[,2]))
+[1] 3
+> max(Discoveries[,2])
+[1] 12
+> which(Discoveries[,2]==12)
+[1] 26
+> Discoveries[26,]
+   year count
+26 1885    12
+```
+
+
+ 
