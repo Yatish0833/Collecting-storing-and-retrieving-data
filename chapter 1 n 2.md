@@ -531,6 +531,68 @@ We will be mainly dealing with big data through R, descriptive statistics functi
    year count
 26 1885    12
 ```
+To obtain quick summary statistics on a data object, use the summary() function.
+```r
+> summary(Discoveries)
+      year          count     
+ Min.   :1860   Min.   : 0.0  
+ 1st Qu.:1885   1st Qu.: 2.0  
+ Median :1910   Median : 3.0  
+ Mean   :1910   Mean   : 3.1  
+ 3rd Qu.:1934   3rd Qu.: 4.0  
+ Max.   :1959   Max.   :12.0  
+ ```
+ To sum a column in a data frame, use the colSums() function.
+ ```r
+ > colSums(Discoveries[2])
+count 
+  310 
+```
+> Note 1: Note that the colSums()function requires an array reference rather than a data frame, therefore no comma.
+> Note 2: Note the camel casing in function name. camelCase is the practice of writing compound words or phrases such that each word or abbreviation begins with a capital letter. Remember R is case sensitive.
 
+##### Running queries on dataframes
+Queries become the most important part of data analysis. We have a huge dataset and we need to know something about a particular data. We use simple or complex queries to do statistical analysis on data or for searching something specific within the data. 
+```r
+# how many years were fewer than 5 discoveries observed?
+> length(which(Discoveries[,2] < 5))
+[1] 79
+#  In which years were fewer than 5 discoveries observed?
+> Discoveries[(which(Discoveries[,2] < 5)),]
+    year count
+2   1861     3
+3   1862     0
+4   1863     2
+5   1864     0
+# List of years with 0 discoveries
+> Discoveries[(which(Discoveries[,2] == 0)),1]
+[1] 1862 1864 1881 1904 1917 1933 1956 1957 1959
+```
+
+##### Dealing with missing data
+Missing data values in a data frame are encoded as NA. A missing value bars any calculation of summary statistics or numeric expression.
+Missing values can be removed using in built R function na.omit. Some functions support na.rm as argument to remove missing values while doing the calculations. To find out whether the dataset has missing values or not functions like any() or is.na() are used.
+Lets see these functions using in build dataset of R called "airquality" which contains measurements of daily air quality in New York City from May through September 1973.
+```r
+> head(airquality)
+Ozone Solar.RWind Temp Month Day
+1 41 190 7.4 67 5 1
+2 36 118 8.0 72 5 2
+3 12 149 12.6 74 5 3
+4 18 313 11.5 62 5 4
+5 NANA14.3 56 5 5
+6 28 NA14.9 66 5 6
+> mean(airquality$Solar.R)
+[1] NA
+Warning message:
+In mean.default(airquality) :
+  argument is not numeric or logical: returning NA
+  
+> any(is.na(airquality))
+[1] TRUE
+> mean(airquality$Solar.R,na.rm=TRUE)
+[1] 185.9315
+> which(is.na(airquality$Solar.R))
+[1] 5 6 11 27 96 97 98
 
  
