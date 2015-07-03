@@ -595,4 +595,14 @@ In mean.default(airquality) :
 > which(is.na(airquality$Solar.R))
 [1] 5 6 11 27 96 97 98
 
- 
+> air_complete<-na.omit(airquality)
+> head(air_complete)
+Ozone Solar.RWind Temp Month Day
+1 41 190 7.4 67 5 1
+2 36 118 8.0 72 5 2
+3 12 149 12.6 74 5 3
+4 18 313 11.5 62 5 4
+7 23 299 8.6 65 5 7
+8 19 99 13.8 59 5 8
+```
+
