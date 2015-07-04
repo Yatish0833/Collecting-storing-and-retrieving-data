@@ -638,11 +638,256 @@ a<-10
 + print("a is less than b")
 + }
 ```
-##### Logical operators                                             Binary Operators
-| Operators     | Semantics                |                        | Operators  | Semantics                         |
-| ------------- |:------------------------:|                        | ---------- |:---------------------------------:|
-| ==            | Equality                 |                        | &&         | AND (both statements are true)    |
-| <             | Less than                |                        | ||         | OR (Atleast one statement is true |
-| >             | Greater than             |                        | !          | NOT (Statement is false)          |
+##### Logical operators                                             
+| Operators     | Semantics                |                      
+| ------------- |:------------------------:|                        
+| ==            | Equality                 |                        
+| <             | Less than                |                        
+| >             | Greater than             |                        
 | <=            | Less than or equal to    |
 | >=            | Greater than or equal to |
+
+##### Binary Operators
+| Operators  | Semantics                         |
+| ---------- |:---------------------------------:|
+| &&         | AND (both statements are true)    |
+| ||         | OR (Atleast one statement is true |
+| !          | NOT (Statement is false)          |
+
+#### Nested IF statements 
+```r
+> if (sum(1:10) >= sqrt(75)) {
++ print("true")
++ } else {
++ print("false")
++ }
+[1] "true"
+```
+The ifelse() function provides a more compact syntax for if-else constructs.
+```r
+> ifelse(sum(1:5) >= 10, "it's greater", "it's smaller")
+[1] "it's greater"
+```
+
+#### Switch statements
+Switch statements are used when a particular variable can have multiple cases and different logic is needed for each case.
+```r
+> name <- readline(prompt="Enter a name: ")
+Enter a name: Michelle
+> switch(name,
++ Michelle={
++ print("Hi Michelle! How are you?") # any logical statement for Michelle
++ },
++ John={
++ print("Hi John! How are you?") # any logical statement for John
++ },
++ {
++ Print("default") #default logic
++ }
++ )
+[1] "Hi Michelle! How are you?"
+```
+
+#### Control structures
+R supports two common forms of iteration (looping):
+* restricted iterationwhich executes commands a fixed number of times: for loop
+* unrestricted iterationin which the loop runs until some condition is no longer true: while loop
+
+The for loop runs a fixed number of times based on the values assigned to an index or looping variable.
+```r
+> for (i in 1:3) {
++ print(paste("i =",i))
++ }
+[1] "i = 1"
+[1] "i = 2"
+[1] "i = 3"
+> i
+[1] 3
+```
+Instead of looping a fixed number of times, a forloop can also iterate over a set. The loop variable takes on each value in the set one at a time.
+```r
+> cities <-c("Boston","NewYork","SanFrancisco")
+> for (city in cities) {
++ print(city)
++ }
+[1] "Boston"
+[1] "New York"
+[1] "San Francisco"
+```
+
+For loops can be nested to run through a each row and column of a matrix.
+```r
+> mat<- matrix(nrow=4, ncol=5, sample(0:1))
+> mat
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    0    0    0    0    0
+[2,]    1    1    1    1    1
+[3,]    0    0    0    0    0
+[4,]    1    1    1    1    1
+> for (i in 1:nrow(mat) ) {
++ for (j in 1:ncol(mat)){
++ if(mat[i,j] == 1){
++ mat[i,j]<- "Michelle"
++ }
++ else{
++ mat[i,j]<- "John"
++ }
++ }
++ }
+> mat
+     [,1]       [,2]       [,3]       [,4]       [,5]      
+[1,] "John"     "John"     "John"     "John"     "John"    
+[2,] "Michelle" "Michelle" "Michelle" "Michelle" "Michelle"
+[3,] "John"     "John"     "John"     "John"     "John"    
+[4,] "Michelle" "Michelle" "Michelle" "Michelle" "Michelle"
+```
+In unrestricted iteration, the loop executes the loop statements until a condition is no longer true.
+```r
+> x <-0
+> while (x < 10) {
++ print (x)
++ x <-x + 1
++ }
+[1] 0
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+```
+#### Apply function
+Apply function is a modern way of looping which actually surpasses the lengthy process of looping and gives the same result. 
+> Applies a function to components of a list or other object, and then returns the results as a list, a vector, or a matrix.
+
+```r
+> x <- matrix(c(1:10), ncol=5, byrow=TRUE)
+> x
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    2    3    4    5
+[2,]    6    7    8    9   10
+> apply(x, 1, mean)
+[1] 3 8
+> apply(x, 2, mean)
+[1] 3.5 4.5 5.5 6.5 7.5
+```
+> Note: apply(x, 1, mean) calculates the mean of two rows in x, and  apply(x, 2, mean) calculates the mean of five columns in x.
+
+In above example, apply extracts each column/row as a vector, one at a time and passes it to mean function. It substitutes the use of loop. Above code can be written as:
+```r
+> avgs<-numeric(5)
+> for(i in 1:5){
++   avgs[i]<-mean(x[,i])
++ }
+> avgs
+[1] 3.5 4.5 5.5 6.5 7.5
+
+#OR
+> apply(x, 2, mean)
+[1] 3.5 4.5 5.5 6.5 7.5
+```
+Looping becomes very slow, much more so in large datasets. Apply function reduces the processing time considerably as looping in apply function is done in compiled code, like c or fortran, not in R’s own interpreted code.
+
+#### Types of apply 
+* lapply - L in lapply stands for list. So lapply(x)  returns a list of the same length of x
+```r
+> x<- list(a<-c(1:20),b<-c(10:20),c<-c(20:30))
+> x
+[[1]]
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+
+[[2]]
+ [1] 10 11 12 13 14 15 16 17 18 19 20
+
+[[3]]
+ [1] 20 21 22 23 24 25 26 27 28 29 30
+> results<-lapply(x,mean)
+> results
+[[1]]
+[1] 10.5
+
+[[2]]
+[1] 15
+
+[[3]]
+[1] 25
+> class(results)
+[1] "list"
+```
+* sapply - S stands for simplify. Sapply works like lapply but instead of returning a list it returns a simple vector.
+```r
+> results<-sapply(x,mean)
+> results
+[1] 10.5 15.0 25.0
+> class(results)
+[1] "numeric"
+```
+* tapply - It is used to apply a function to subsets of a vector and the subsets are defined by some other vector, usually a factor. 
+```r
+> x <- 1:20
+> x
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+> y <- factor(rep(letters[1:5], each = 4))
+> y
+ [1] a a a a b b b b c c c c d d d d e e e e
+Levels: a b c d e
+> tapply(x, y, mean)
+   a    b    c    d    e 
+ 2.5  6.5 10.5 14.5 18.5 
+```
+* mapply - mapply is used when you want to apply a function to the 1st element of each and then the 2nd elements of each etc.
+```r
+> mapply(sum, 1:5, 1:5, 1:5)
+[1]  3  6  9 12 15
+> mapply(rep, 1:4, 4:1)
+[[1]]
+[1] 1 1 1 1
+[[2]]
+[1] 2 2 2
+[[3]]
+[1] 3 3
+[[4]]
+[1] 4
+```
+
+#### Split-Apply-Combine strategy
+* Break up big problems into manageable pieces
+* Perform operations on each piece separately.
+* Combine the output of each piece into a single output.
+Plyr package provides intuitive functions for split-apply-combine strategy
+![plyr package](https://github.com/Yatish0833/Collecting-storing-and-retrieving-data/blob/master/Images/plyr.png "Plyr package")
+
+###### Example:
+1. Split the iris dataset into three parts.
+2. Remove the species name variable from the data.
+3. Calculate the mean of each variable for the three different parts separately.
+4. Combine the output into a single data frame.
+```r
+> library (plyr)
+> ddply(iris,~Species,function(x) colMeans(x[,-which(colnames(x)=="Species")]))
+     Species Sepal.Length Sepal.Width Petal.Length Petal.Width
+
+1     setosa        5.006       3.428        1.462       0.246
+2 versicolor        5.936       2.770        4.260       1.326
+virginica        6.588       2.974        5.552       2.026
+
+OR
+
+> iris_mean <- adply(iris3,3,colMeans)
+> iris_mean
+          X1 Sepal L. Sepal W. Petal L. Petal W.
+1     Setosa    5.006    3.428    1.462    0.246
+2 Versicolor    5.936    2.770    4.260    1.326
+3  Virginica    6.588    2.974    5.552    2.026
+> class(iris_mean)
+[1] "data.frame"
+```
+> Note: You need to install the plyr package to run this code.
+
+
+
+
+
