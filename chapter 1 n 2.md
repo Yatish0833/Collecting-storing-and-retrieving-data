@@ -628,3 +628,21 @@ df<-data.frame(x,y)
 10 10 300.0000
 ```
 Source function specially comes in handy when you are dealing with huge dataset and loading data takes time. 
+
+#### Conditional Statements 
+In conditional execution, code statements are only executed if certain conditions are TRUE. The if() statement is used to construct conditional execution paths. The conditional code statements are enclosed in curly braces { and }.
+```r
+a<-10
+> b<-5
+> if(a < b) {
++ print("a is less than b")
++ }
+```
+##### Logical operators
+| Operators     | Semantics                |
+| ------------- |:------------------------:|
+| ==            | Equality                 |
+| <             | Less than                |
+| >             | Greater than             |
+| <=            | Less than or equal to    |
+| >=            | Greater than or equal to |
