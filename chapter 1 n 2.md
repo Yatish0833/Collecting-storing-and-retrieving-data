@@ -638,11 +638,11 @@ a<-10
 + print("a is less than b")
 + }
 ```
-##### Logical operators
-| Operators     | Semantics                |
-| ------------- |:------------------------:|
-| ==            | Equality                 |
-| <             | Less than                |
-| >             | Greater than             |
+##### Logical operators                                             Binary Operators
+| Operators     | Semantics                |                        | Operators  | Semantics                         |
+| ------------- |:------------------------:|                        | ---------- |:---------------------------------:|
+| ==            | Equality                 |                        | &&         | AND (both statements are true)    |
+| <             | Less than                |                        | ||         | OR (Atleast one statement is true |
+| >             | Greater than             |                        | !          | NOT (Statement is false)          |
 | <=            | Less than or equal to    |
 | >=            | Greater than or equal to |
