@@ -605,4 +605,26 @@ Ozone Solar.RWind Temp Month Day
 7 23 299 8.6 65 5 7
 8 19 99 13.8 59 5 8
 ```
+##### Saving R scripts
+R commands can be created in a text file and loaded on demand rather than typing it in over and over. Create a text file in a text editor and save the file with the .R extension. Use the source()function to load and execute the script.
+```r
+# Simple R script: created.R
+x<-1:10
+y<-seq(from=100,to=300,length=10)
+df<-data.frame(x,y)
 
+> source("created.R")
+> df
+    x        y
+1   1 100.0000
+2   2 122.2222
+3   3 144.4444
+4   4 166.6667
+5   5 188.8889
+6   6 211.1111
+7   7 233.3333
+8   8 255.5556
+9   9 277.7778
+10 10 300.0000
+```
+Source function specially comes in handy when you are dealing with huge dataset and loading data takes time. 
