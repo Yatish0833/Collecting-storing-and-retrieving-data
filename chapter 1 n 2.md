@@ -887,6 +887,81 @@ OR
 ```
 > Note: You need to install the plyr package to run this code.
 
+#### Reading and writing data
+The ability to read and write external text files is an essential part of data processing. Many data sets are stored in simple text files. Excel and other programs can export and import text files in certain formats.
+
+lets Load the built-in data set AirPassengers containing monthly international airline passenger data between 1949 and 1960, After displaying the data set, copy the data into a simple text file.
+```r
+> AirPassengers
+     Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
+1949 112 118 132 129 121 135 148 148 136 119 104 118
+1950 115 126 141 135 125 149 170 170 158 133 114 140
+1951 145 150 178 163 172 178 199 199 184 162 146 166
+1952 171 180 193 181 183 218 230 242 209 191 172 194
+1953 196 196 236 235 229 243 264 272 237 211 180 201
+1954 204 188 235 227 234 264 302 293 259 229 203 229
+1955 242 233 267 269 270 315 364 347 312 274 237 278
+1956 284 277 317 313 318 374 413 405 355 306 271 306
+1957 315 301 356 348 355 422 465 467 404 347 305 336
+1958 340 318 362 348 363 435 491 505 404 359 310 337
+1959 360 342 406 396 420 472 548 559 463 407 362 405
+1960 417 391 419 461 472 535 622 606 508 461 390 432
+```
+While R has several functions for reading files, the most commonly used function for reading text files is read.table().
+```r
+> ap<-read.table("airPassengers.txt",header=TRUE,sep="")
+> ap
+     Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
+1949 112 118 132 129 121 135 148 148 136 119 104 118
+1950 115 126 141 135 125 149 170 170 158 133 114 140
+1951 145 150 178 163 172 178 199 199 184 162 146 166
+1952 171 180 193 181 183 218 230 242 209 191 172 194
+1953 196 196 236 235 229 243 264 272 237 211 180 201
+1954 204 188 235 227 234 264 302 293 259 229 203 229
+1955 242 233 267 269 270 315 364 347 312 274 237 278
+1956 284 277 317 313 318 374 413 405 355 306 271 306
+1957 315 301 356 348 355 422 465 467 404 347 305 336
+1958 340 318 362 348 363 435 491 505 404 359 310 337
+1959 360 342 406 396 420 472 548 559 463 407 362 405
+1960 417 391 419 461 472 535 622 606 508 461 390 432
+```
+The read.table() function has a skip=xparameter which allows you to skip some number of lines.
+```r
+> ap<-read.table("airPassengers.txt",skip=4,header=TRUE,sep="")
+> ap
+  X1952 X171 X180 X193 X181 X183 X218 X230 X242 X209 X191 X172 X194
+1  1953  196  196  236  235  229  243  264  272  237  211  180  201
+2  1954  204  188  235  227  234  264  302  293  259  229  203  229
+3  1955  242  233  267  269  270  315  364  347  312  274  237  278
+4  1956  284  277  317  313  318  374  413  405  355  306  271  306
+5  1957  315  301  356  348  355  422  465  467  404  347  305  336
+6  1958  340  318  362  348  363  435  491  505  404  359  310  337
+7  1959  360  342  406  396  420  472  548  559  463  407  362  405
+8  1960  417  391  419  461  472  535  622  606  508  461  390  432
+```
+New columns can be added to a data set using the cbind() function.
+```r
+> ap$Total<-cbind(rowSums(ap))
+> ap
+  X1952 X171 X180 X193 X181 X183 X218 X230 X242 X209 X191 X172 X194 Total
+1  1953  196  196  236  235  229  243  264  272  237  211  180  201  4653
+2  1954  204  188  235  227  234  264  302  293  259  229  203  229  4821
+3  1955  242  233  267  269  270  315  364  347  312  274  237  278  5363
+4  1956  284  277  317  313  318  374  413  405  355  306  271  306  5895
+5  1957  315  301  356  348  355  422  465  467  404  347  305  336  6378
+6  1958  340  318  362  348  363  435  491  505  404  359  310  337  6530
+7  1959  360  342  406  396  420  472  548  559  463  407  362  405  7099
+8  1960  417  391  419  461  472  535  622  606  508  461  390  432  7674
+```
+A data object can be exported to a file using the write.table() function.
+
+```r
+> getwd()
+[1] "C:/Users/Martin/Downloads"
+> write.table(ap,"AirPassNG.txt",col.names=NA,
+row.names=TRUE,quote=FALSE,sep=",")
+```
+> Note:R requires the use of a forward slash (‘/’) to separate directories (folders) not the back slash (‘\’) used by Windows.
 
 
 
